@@ -1,0 +1,171 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Backpack Manager - Features & Guide</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .feature-icon {
+      font-size: 2rem;
+      color: #0d6efd;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">🎒 Backpack Manager</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#knapsack">Knapsack Info</a></li>
+          <li class="nav-item"><a class="nav-link" href="#usage">How to Use</a></li>
+          <li class="nav-item"><a class="nav-link" href="daa_exp.html">Go to App</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container py-5">
+    <h1 class="mb-4 text-center">🎒 Backpack Management System</h1>
+    <p class="lead text-center">Easily manage your items using optimization strategies!</p>
+
+    <hr class="my-5" />
+
+    <!-- Features Section -->
+    <h2 class="mb-4 text-primary">🔧 Features</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-plus-circle feature-icon"></i> Add Items</h5>
+            <p class="card-text">Add items to the backpack with name, weight, and value. Items are stored locally.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-trash feature-icon"></i> Remove Items</h5>
+            <p class="card-text">Easily delete any item from the list using the remove button.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-bar-chart feature-icon"></i> 0/1 & Fractional Knapsack</h5>
+            <p class="card-text">Choose between classic 0/1 or fractional knapsack algorithms to calculate optimal value.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-download feature-icon"></i> Export Items</h5>
+            <p class="card-text">Download your backpack items as JSON or CSV for reuse or sharing.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-box-arrow-in-down feature-icon"></i> Save/Load Data</h5>
+            <p class="card-text">Backpack items persist using localStorage so they stay saved even after reload.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-5" id="knapsack"/>
+
+    <!-- Knapsack Explanation -->
+    <h2 class="mb-4 text-info">🧠 What are 0/1 and Fractional Knapsack Problems?</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card border-primary shadow-sm">
+          <div class="card-header bg-primary text-white">0/1 Knapsack</div>
+          <div class="card-body">
+            <p class="card-text">
+              In the <strong>0/1 Knapsack problem</strong>, you can either take an entire item or leave it — no partial items allowed. It's solved using <em>Dynamic Programming</em> to maximize the total value without exceeding the weight limit.
+            </p>
+            <ul>
+              <li>✅ Items are either fully taken or skipped.</li>
+              <li>📦 Good for scenarios like picking products where partial use isn't allowed.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 mt-4 mt-md-0">
+        <div class="card border-success shadow-sm">
+          <div class="card-header bg-success text-white">Fractional Knapsack</div>
+          <div class="card-body">
+            <p class="card-text">
+              In the <strong>Fractional Knapsack problem</strong>, items can be broken into smaller parts. It's solved using a <em>Greedy Algorithm</em>, usually by selecting items with the highest value-to-weight ratio first.
+            </p>
+            <ul>
+              <li>✅ Items can be partially included.</li>
+              <li>🥤 Ideal for resources like liquids or grains that can be divided.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-5" id="usage"/>
+
+    <!-- How to Use -->
+    <h2 class="mb-4 text-success">📖 How to Use</h2>
+    <ol class="list-group list-group-numbered">
+      <li class="list-group-item">Go to the main backpack manager page.</li>
+      <li class="list-group-item">Use the form to add item name, weight, and value.</li>
+      <li class="list-group-item">Click "Add Item" to insert the item into the backpack list.</li>
+      <li class="list-group-item">Choose the knapsack type (0/1 or Fractional) and enter capacity.</li>
+      <li class="list-group-item">Click "Solve" to view the optimal selection of items.</li>
+      <li class="list-group-item">Export the current backpack list using "Export as JSON/CSV" buttons.</li>
+      <li class="list-group-item">Use the clear/reset button to start fresh if needed.</li>
+    </ol>
+
+    <div class="text-center mt-5">
+      <a href="daa_exp.html" class="btn btn-primary btn-lg">🔙 Go to Backpack Manager</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">© 2025 Backpack Manager. Built with ❤️ by Akash Malik.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
